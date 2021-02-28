@@ -82,3 +82,16 @@ function validateCred(array) {
 }
 
 console.log(validateCred(invalid5));
+
+// Function to find invalid cards in a batch
+function findInvalidCards(array) {
+  let invalidCards = [];
+  for (arr of array) {
+    if (!validateCred(arr)) {
+      invalidCards.push(arr);
+    }
+  }
+  return invalidCards;
+}
+
+console.log(findInvalidCards(batch));
